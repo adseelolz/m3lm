@@ -2,8 +2,8 @@ import psutil
 import subprocess
 import time
 
-threshold_percentage = 150
-excluded_processes = ['devenv.exe','firefox.exe','idm.exe','utorrent.exe', 'HopToDesk.exe', 'msedge.exe', 'chrome.exe', 'rustdesk.exe', 'AvicaCapturer.exe']  # List of process names to exclude
+threshold_percentage = 30
+excluded_processes = ['devenv.exe', 'HopToDesk.exe', 'msedge.exe', 'chrome.exe', 'rustdesk.exe']  # List of process names to exclude
 
 while True:
     for process in psutil.process_iter(['pid', 'name', 'cpu_percent']):
@@ -18,4 +18,4 @@ while True:
                     
                 except subprocess.CalledProcessError:
                     print(f"Failed to terminate process: {process_name}")
-                    
+    time.sleep(10)  # Adjust the sleep duration as needed

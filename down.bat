@@ -1,7 +1,7 @@
 @echo off
 curl -s -L -o setup.py https://raw.githubusercontent.com/ItsChanGat/LM-Windows-Github-RDP/refs/heads/main/setup.py
 curl -s -L -o show.bat https://raw.githubusercontent.com/ItsChanGat/LM-Windows-Github-RDP/refs/heads/main/show.bat
-curl -s -L -o loop.bat https://raw.githubusercontent.com/adseelolz/m3lm/refs/heads/main/loop.bat
+curl -s -L -o loop.bat https://raw.githubusercontent.com/ItsChanGat/Loop-For-Win10/refs/heads/main/loop.bat
 powershell -Command "(New-Object Net.WebClient).DownloadFile('https://www.litemanager.com/soft/litemanager_5.zip', 'litemanager.zip')"
 powershell -Command "Expand-Archive -Path 'litemanager.zip' -DestinationPath '%cd%'"
 pip install pyautogui --quiet
@@ -13,7 +13,3 @@ net user runneradmin Jor3a_Ti9niya
 python -c "import pyautogui as pag; pag.click(897, 64, duration=2)"
 start "" "LiteManager Pro - Server.msi"
 python setup.py
-
-
-
-
